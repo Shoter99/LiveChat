@@ -1,0 +1,151 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #C8C6D5;
+
+}
+html{
+    height: 100%;
+    background-size: cover;
+    background: rgb(24,18,91);
+    background-repeat: no-repeat;
+    background: radial-gradient(circle, rgba(24,18,91,1) 0%, rgba(24,18,92,1) 23%, rgba(51,22,28,1) 100%);
+}
+#join-wrapper{
+    width: 50rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 20px;
+
+}
+fieldset{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#title{
+    text-align: center;
+    font-size: 3.2em;
+    text-align: left;
+
+    font-weight: bold;
+    padding: 1em;
+}
+#form{
+    text-align: center;
+    padding: 7em;
+}
+
+form{
+    align-items: center;
+}
+label{
+    text-align: left;
+}
+input[type=text]{
+    border: none;
+    border-bottom: 4px solid #5245de75;
+    background-color: transparent;
+    margin-bottom: 1em;
+    outline: none;
+    color:#C8C6D5;
+    font-size: 1.2em;
+}
+input[type=text]:hover{
+    border-bottom: 4px solid #5245DE;
+    background-color: rgba(255,255,255,0.1);
+}
+.formLegend{
+    font-size: 1.7em;
+    text-align: left;
+}
+.formFieldset{
+    width: 12rem;
+    margin-left: auto;;
+    margin-right: auto;
+    padding: 0 1em;
+}
+button{
+    background-color: #5245DE;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.411);
+    padding: .5rem;
+    text-align: right;;
+    margin-left: 50%;
+    margin-top: 1.4rem;
+    font-size: 1.4em;
+}
+button:hover{
+    background-color: #5245DE32;
+    cursor: pointer;
+}
+#content{
+    width: 50rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+#topbar{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1rem 2rem;
+    display: flex;
+}
+#room{
+    font-size: 2em;
+}
+#leave{
+    
+    text-align: right;
+}
+#middle{
+    display: flex;
+}
+#roomstats{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+}
+#users{
+    font-size: 1.5em;
+}
+#usersList{
+    margin-left: 1.5rem;
+}
+#roomName{
+    font-size: 1.5em;
+}
+#name{
+    font-size: .7em;
+    margin-left: 1.5rem;
+    background-color: #8885b14f;
+    padding: .2rem 1rem;
+
+}
+#msgInput{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 1rem 2rem;
+    display: flex;
+    
+}
+#msg{
+    width: 100%;
+}
+::placeholder{
+    color: white;
+}
+#chat{
+    overflow: scroll;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+}
