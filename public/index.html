@@ -9,24 +9,22 @@
 </head>
 <body>
     <div id="content">
-    <div id="join-wrapper">
         <fieldset>
             <legend id="title">Welcome to LiveChat</legend>
             <div id="form">
-                <form>
+                <form action="chatroom.html">
                     <fieldset class="formFieldset">
                     <legend class="formLegend">Username</legend>
-                        <input name="username" type="text" id="username"><br>
+                        <input required class="formInput" name="username" type="text" id="username"><br>
                     </fieldset>
                     <fieldset class="formFieldset">
                     <legend class="formLegend">Room ID</legend>
-                        <input name="username" type="text" id="roomID"><br>
+                        <input required class="formInput" name="roomID" type="text" id="roomID"><br>
                     </fieldset>
-                    <button type="submit">Join Chat</button><br>
+                    <button id="joinChat" type="submit">Join Chat</button><br>
                 </form>
             </div>
         </fieldset>
-    </div>
     </div>
 </body>
 </html>

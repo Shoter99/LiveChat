@@ -11,41 +11,19 @@ html{
     background-repeat: no-repeat;
     background: radial-gradient(circle, rgba(24,18,91,1) 0%, rgba(24,18,92,1) 23%, rgba(51,22,28,1) 100%);
 }
-#join-wrapper{
-    width: 50rem;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-
-    border-radius: 20px;
-
-}
 fieldset{
     background-color: rgba(255, 255, 255, 0.2);
 }
 #title{
     text-align: center;
-    font-size: 3.2em;
+    font-size: 1.5em;
     text-align: left;
 
     font-weight: bold;
     padding: 1em;
 }
-#form{
-    text-align: center;
-    padding: 7em;
-}
 
-form{
-    align-items: center;
-}
-label{
-    text-align: left;
-}
-input[type=text]{
+.formInput{
     border: none;
     border-bottom: 4px solid #5245de75;
     background-color: transparent;
@@ -54,7 +32,7 @@ input[type=text]{
     color:#C8C6D5;
     font-size: 1.2em;
 }
-input[type=text]:hover{
+.formInput:hover{
     border-bottom: 4px solid #5245DE;
     background-color: rgba(255,255,255,0.1);
 }
@@ -63,19 +41,20 @@ input[type=text]:hover{
     text-align: left;
 }
 .formFieldset{
-    width: 12rem;
+
     margin-left: auto;;
     margin-right: auto;
     padding: 0 1em;
+}
+#joinChat{
+    margin: .2rem;
 }
 button{
     background-color: #5245DE;
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.411);
     padding: .5rem;
-    text-align: right;;
-    margin-left: 50%;
-    margin-top: 1.4rem;
+    text-align: right;
     font-size: 1.4em;
 }
 button:hover{
@@ -83,63 +62,72 @@ button:hover{
     cursor: pointer;
 }
 #content{
-    width: 50rem;
+    height: 100%;
     margin: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    overflow: hidden;
 }
 #topbar{
     background-color: rgba(255, 255, 255, 0.2);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     padding: 1rem 2rem;
     display: flex;
+    align-items: center;
+    height: 5%;
 }
 #room{
-    font-size: 2em;
+    font-size: 1.5em;
+    
 }
 #leave{
-    
-    text-align: right;
+    position: relative;
+    font-size: .8em;
+    padding: .3rem;
+    margin-left: auto;
+    margin-right: 0;
 }
 #middle{
     display: flex;
+    height: 80%;
 }
 #roomstats{
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    padding: .7rem;
 }
 #users{
-    font-size: 1.5em;
+    font-size: 1.1em;
 }
-#usersList{
-    margin-left: 1.5rem;
-}
+
 #roomName{
-    font-size: 1.5em;
+    font-size: 1.1em;
+    
+    
 }
 #name{
-    font-size: .7em;
+    font-size: .8em;
     margin-left: 1.5rem;
     background-color: #8885b14f;
-    padding: .2rem 1rem;
-
+    padding: .1rem .5rem;
+    overflow: scroll;
+    max-width: 5ch;
 }
 #msgInput{
     background-color: rgba(255, 255, 255, 0.2);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 1rem 2rem;
+    padding: 1rem;
     display: flex;
-    
+    align-items: top;
+    height: 15%;
 }
 #msg{
     width: 100%;
+    margin-right: .5rem;
+    color:rgba(255, 255, 255, 0.5);
+    background-color: #ffffff21;
+    border: none;
+    border-bottom:#5245DE solid 2px;
+    outline: none;
+    height: 35%;
 }
 ::placeholder{
     color: white;
@@ -148,4 +136,51 @@ button:hover{
     overflow: scroll;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.05);
+}
+#send{
+    position: relative;
+    font-size: .8em;
+    padding: .3rem;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0 1rem;
+    margin: 0;
+    height: 2rem;
+    margin-top: .5rem;
+}
+.message{
+    background-color: #ffffff21;
+    border-radius: 10px;
+    margin: 0 .5rem;
+    max-width: 75ch;
+}
+.info{
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: .8rem;
+    padding-top: .2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: .7em;
+}
+.mes{
+    margin-top: .2rem;
+    margin-left: 1.4rem;
+    padding-top: 0;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+    font-size: 1.1em;
+    word-wrap: break-word;
+}
+#chat-form{
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{
+    width: 3px;
+    height: 3px;
+}
+::-webkit-scrollbar-track{
+    background: #ffffff21;
 }

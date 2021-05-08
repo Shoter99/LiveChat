@@ -6,35 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LiveChat Room</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous" defer></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <div id="content">
         <div id="topbar">
-            <div id="room">LiveChat Room</div>
+            <div id="room">👾 LiveChat Room</div>
             <button id="leave">Leave room</button>
         </div>
         <div id="middle">
             <div id="roomstats">
                 <div id="roomName">Room ID: <br>
-                    <span id="name">RoomNr</span>
+                    <div id="name">RoomNr</div>
                 </div>
                 <p id="users">
                     Users:
-                        <p id="usersList">
-                            User1<br><br>
-                            User2<br><br>
-                            User3<br><br>
-                            User4
-                        </p>
+                        <ul id="usersList">
+                        </ul>
                     </p>
             </div>
-            <div id="chat">Chat</div>
+            <div id="chat">
+            </div>
         </div>
         <div id="msgInput">
-            
-            <input type="text" id="msg" placeholder="Enter message" id="msg">
-            <button> Send</button>
+            <form id="chat-form">
+                <input required type="text" id="msg" placeholder="Enter message" id="msg">
+                <button id="send"> Send</button>
+            </form>
         </div>
     </div>
+
+    <script>
+        function Leave(){
+            window.location.href = "index.html"
+        }
+        document.getElementById("leave").addEventListener("click", Leave)
+    </script>
 </body>
 </html>
