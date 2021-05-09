@@ -2,12 +2,15 @@ const express = require('express')
 const http = require('http')
 const path = require('path')
 const socketio = require('socket.io')
+const mysql = require('mysql')
 const {FormatMessages, AddMessage, GetMessages} = require('./utils/messages')
 const {UserJoin, GetCurrentUser, UserLeave, GetRoomUsers} = require('./utils/users')
+
 
 const app = express()
 const server = http.createServer(app)
 const PORT = 3000 || process.env.PORT
+
 const io = socketio(server)
 
 app.use(express.static(path.join(__dirname, 'public')))
