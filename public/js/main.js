@@ -22,7 +22,6 @@ socket.on('roomInfo', ({roomID, users}) => {
 })
 //message from server
 socket.on('message', message => {
-    console.log(message)
     OutputMessage(message)
 
     chatMessage.scrollTop = chatMessage.scrollHeight
@@ -63,6 +62,7 @@ function OutputUsers(users){
 }
 function OutputMessages(messages){
     messages.map(message => {
+        
         OutputMessage(message)
     })
 }

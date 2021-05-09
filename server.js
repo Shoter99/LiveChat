@@ -22,8 +22,11 @@ io.on('connection', socket => {
         const user = UserJoin(socket.id, username, roomID);
         socket.join(user.roomID)
         //load messages
-        socket.emit('loadMessages',GetMessages(roomID)
-        )
+        GetMessages(roomID, (err, data) => {
+                if(err) throw(err)
+                socket.emit('loadMessages', data)
+            })
+        
         //emit welcome message for connecting user
         //socket.emit('message', FormatMessages('Server', 'Welcome to the chat!'))
         //broadcast message when user joins chat
